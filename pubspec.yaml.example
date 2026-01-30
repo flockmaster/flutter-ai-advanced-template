@@ -1,0 +1,107 @@
+name: flutter_template
+description: Flutter 项目标准模版 - 基于 Stacked Framework (MVVM) 架构
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Core UI & Navigation ---
+  cupertino_icons: ^1.0.8
+  go_router: ^14.0.0
+  lucide_icons: ^0.257.0
+  
+  # --- State Management ---
+  stacked: ^3.4.1
+  stacked_services: ^1.4.0
+  provider: ^6.1.2 # Optional for legacy/hybrid support
+
+  # --- Dependency Injection ---
+  get_it: ^7.7.0
+  injectable: ^2.4.1
+  equatable: ^2.0.5
+  json_annotation: ^4.9.0
+
+  # --- Network & Data ---
+  dio: ^5.5.0
+  shared_preferences: ^2.2.3
+  sqflite: ^2.3.3
+  
+  # --- Utilities ---
+  path: ^1.9.0
+  intl: ^0.19.0
+  logger: ^2.3.0  # Added for better logging
+  cached_network_image: ^3.3.1
+  flutter_staggered_grid_view: ^0.7.0
+  image_picker: ^1.1.2
+  faker: ^2.2.0
+  permission_handler: ^11.3.1
+
+  # --- Features (Common) ---
+  mobile_scanner: ^5.1.0 # Replaced outdated qr_code_scanner
+  # qr_flutter: ^4.1.0 # Optional: Generate QR codes
+  # model_viewer_plus: ^1.7.2 # Optional: 3D Model Viewer
+
+  # --- Optional Features (Uncomment to enable) ---
+  # Map Support
+  # flutter_map: ^7.0.2
+  # latlong2: ^0.9.1
+  # geolocator: ^13.0.2
+  
+  # Local Server (for assets/mocking)
+  # shelf: ^1.4.1
+  # shelf_static: ^1.1.2
+  
+  # AI & Camera
+  # camera: ^0.11.0
+  # tflite_flutter: ^0.12.1
+  # easy_refresh: ^3.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  test: ^1.25.0
+
+  # --- Code Generation ---
+  build_runner: ^2.4.9
+  stacked_generator: ^1.5.0
+  injectable_generator: ^2.6.1
+  json_serializable: ^6.8.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon_2.png"
+  remove_alpha_ios: true
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  # Assets - Cleaned up to essential folders
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/mock_data/
+    # - assets/models/ # Uncomment if using 3D models
+  
+  fonts:
+    - family: Oswald
+      fonts:
+        - asset: assets/fonts/Oswald-Variable.ttf
+          weight: 400
+        - asset: assets/fonts/Oswald-Variable.ttf
+          weight: 500
+        - asset: assets/fonts/Oswald-Variable.ttf
+          weight: 700
+    - family: PingFang SC
+      fonts:
+        - asset: assets/fonts/pingfang-sc-bold.ttf
+          weight: 700
